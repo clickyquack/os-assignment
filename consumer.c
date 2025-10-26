@@ -73,14 +73,10 @@ void* consumer_thread(void* arg) {
         sem_wait(full_sem); // Wait for table to not be empty
         sem_wait(mutex_sem); // Wait for exclusive access to the table
 
-         // Critical section
-         // Remove item from table
-         if (table->count > 0) {
-             table->count--; // Decrement item count
-             item = table->items[table->count]; // Get the item at the new position
-         } else {
-             item = 0; // No item to consume
-         }
+        // Critical section
+        // Remove item from table
+        table->count--; // Decrement item count
+        item = table->items[table->count]; // Get the item at the new position
         printf("Consumer: Consumed item %d. Table has %d items.\n", item, table->count);
         
         sem_post(mutex_sem); // Release exclusive access to table
