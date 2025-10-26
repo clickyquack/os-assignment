@@ -15,9 +15,9 @@
 #define SEM_FULL "/sem_full" // Name for full slots semaphore
 #define SEM_MUTEX "/sem_mutex" // Name for mutual exclusion semaphore
 
-// Define shared buffer structure
+// Define buffer structure
 typedef struct {
-    int items[TABLE_SIZE]; // Array to store items (size = 2)
+    int items[TABLE_SIZE]; // Array to store items of size TABLE_SIZE
     int count; // Current number of items in the table
 } table_t;
 
