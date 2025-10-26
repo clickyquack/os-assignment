@@ -1,4 +1,4 @@
-This program is a simpler implementation of the producer-consumer problem using a buffer table in C. It uses the shared memory and semaphore functionality defined in the C Standard & POSIX library to achieve this. In a terminal in a Linux or Unix environment with gcc installed, the program can be run by running:
+This program is a simple implementation of the producer-consumer problem using a buffer table in C. It uses the shared memory and semaphore functionality defined in the C Standard & POSIX library to achieve this. In a terminal in a Linux or Unix environment with gcc installed, the program can be run by running:
 ```
 ./run_demo.sh
 ```
