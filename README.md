@@ -1,5 +1,5 @@
 # ABOUT
-This program is a simple implementation of the producer-consumer problem using a buffer table in C. A more thorough description of how it works is given in Description.txt.
+This program is a simple implementation of the producer-consumer problem using a buffer table in C. A more thorough description of how it works is given in Description.md.
 
 # HOW TO RUN
 In a terminal in a Linux or Unix environment with gcc installed, the program can be run by running:
