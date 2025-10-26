@@ -9,7 +9,11 @@
 #include <time.h> // For time function
 
 // Configuration constants
+#define DELAY 1 // Delay for thread operation, can be 0
+#define INFINITE_LOOP 0 // 0 for time-bounded loop, 1 for infinite
+#define MAX_RUNTIME 5 // How long to run thread loop for (if above set to 0)
 #define TABLE_SIZE 2 // Maximum items the table can hold
+
 #define SHARED_MEMORY "/shm_table" // Name for shared memory object
 #define SEM_EMPTY "/sem_empty" // Name for empty slots semaphore
 #define SEM_FULL "/sem_full" // Name for full slots semaphore
@@ -59,14 +63,13 @@ void cleanup() {
 void* producer_thread(void* arg) {
     int item = 1; //Integer variable for producing numbered items
     time_t start_time = time(NULL);
-    const int max_runtime = 5; // Set how many seconds to run for
     
     printf("Producer: Start\n");
     // Loop until break
     while (1) {
         // Check if run loop has run long enough
-        // Can be made infinite loop by commenting out this if statement
-        if (time(NULL) - start_time > max_runtime) {
+        if (INFINITE_LOOP) ;
+        else if (time(NULL) - start_time > MAX_RUNTIME) {
             printf("Producer: Time limit reached\n");
             break;
         }
@@ -83,7 +86,7 @@ void* producer_thread(void* arg) {
         
         sem_post(mutex_sem); // Release exclusive access to table
         sem_post(full_sem); // Signal that a slot is now full
-        sleep(1); // Optional delay (can be commented out)
+        sleep(DELAY); // Delay next iteration for DELAY seconds
     }
     return NULL;
 }

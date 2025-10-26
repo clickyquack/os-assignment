@@ -10,7 +10,11 @@
 #include <fcntl.h>
 #include <time.h>
 
+#define DELAY 1
+#define INFINITE_LOOP 0
+#define MAX_RUNTIME 5
 #define TABLE_SIZE 2
+
 #define SHARED_MEMORY "/shm_table"
 #define SEM_EMPTY "/sem_empty"
 #define SEM_FULL "/sem_full"
@@ -58,14 +62,13 @@ void cleanup() {
 void* consumer_thread(void* arg) {
     int item; // Integer variable to store consumed items
     time_t start_time = time(NULL);
-    const int max_runtime = 5; // Set how many seconds to run for
     
     printf("Consumer: Start\n");
     // Loop until break
     while (1) {
         // Check if loop has run long enough
-        // Can be made infinite loop by commenting out this if statement
-        if (time(NULL) - start_time > max_runtime) {
+        if (INFINITE_LOOP) ;
+        else if (time(NULL) - start_time > MAX_RUNTIME) {
             printf("Consumer: Time limit reached\n");
             break;
         }
@@ -73,15 +76,15 @@ void* consumer_thread(void* arg) {
         sem_wait(full_sem); // Wait for table to not be empty
         sem_wait(mutex_sem); // Wait for exclusive access to the table
 
-        // Critical section
-        // Remove item from table
+         // Critical section
+         // Remove item from table
         table->count--; // Decrement item count
         item = table->items[table->count]; // Get the item at the new position
         printf("Consumer: Consumed item %d. Table has %d items.\n", item, table->count);
         
         sem_post(mutex_sem); // Release exclusive access to table
         sem_post(empty_sem); // Signal that a slot is now empty
-        sleep(1); // Optional delay (can be commented out)
+        sleep(DELAY);
     }
     return NULL;
 }
