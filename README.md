@@ -34,3 +34,7 @@ Producer: Time limit reached
 Producer: Cleanup done
 Consumer: Cleanup done
 ```
+
+Example screenshots of operation are given below.
+
+Ran with default parameters: 
