@@ -9,10 +9,10 @@
 #include <time.h> // For time function
 
 // Configuration constants
-#define DELAY 1 // Delay for thread operation, can be 0
+#define DELAY 1 // Delay in seconds for thread loop iterations, can be 0
 #define INFINITE_LOOP 0 // 0 for time-bounded loop, 1 for infinite
-#define MAX_RUNTIME 5 // How long to run thread loop for (if above set to 0)
-#define TABLE_SIZE 2 // Maximum items the table can hold
+#define MAX_RUNTIME 5 // Seconds to run thread loop for (if above set to 0)
+#define TABLE_SIZE 2 // Maximum # of items the table can hold
 
 #define SHARED_MEMORY "/shm_table" // Name for shared memory object
 #define SEM_EMPTY "/sem_empty" // Name for empty slots semaphore
