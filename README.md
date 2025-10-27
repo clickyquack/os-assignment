@@ -35,6 +35,6 @@ Producer: Cleanup done
 Consumer: Cleanup done
 ```
 
-Example screenshots of operation are given below.
-
-Ran with default parameters: 
+# Example screenshots
+Terminal output when ran with default parameters: 
+![default](/screenshots/default.png)
