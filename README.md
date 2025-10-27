@@ -37,7 +37,7 @@ Producer: Cleanup done
 Consumer: Cleanup done
 ```
 
-# Example screenshots
+# EXAMPLE SCREENSHOTS
 Terminal output when ran with default parameters:
 
 ![Default](/screenshots/default.png)
