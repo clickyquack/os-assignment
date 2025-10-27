@@ -1,5 +1,5 @@
 # ABOUT
-This program is a simple implementation of the producer-consumer problem using a buffer table in C. A more thorough description of how it works is given in the file "[Description.md]".
+This program is a simple implementation of the producer-consumer problem using a buffer table in C. A more thorough description of how it works is given in the file "[Description.md](Description.md)".
 
 # HOW TO USE
 Note that the program has editable parameters starting at line 12 of producer.c, and starting at line 13 of consumer.c, which may be changed from their defaults before compiling for different behavior. A description of each parameter is given in the program on its respective line as a comment in producer.c (also shown in [screenshots/parameters.png].
