@@ -38,4 +38,20 @@ Consumer: Cleanup done
 # Example screenshots
 Terminal output when ran with default parameters:
 
-![default](/screenshots/default.png)
+![Default](/screenshots/default.png)
+
+Terminal output when ran with DELAY = 0:
+
+![No delay](/screenshots/nodelay.png)
+
+Terminal output when ran with INFINITE_LOOP = 1:
+
+![Infinite loop](/screenshots/infiniteloop.png)
+
+Terminal output when program compiled and ran manually:
+
+![Manual run](/screenshots/manual.png)
+
+Parameters as listed in producer.c:
+
+![Parameters](/screenshots/parameters.png)
