@@ -1,5 +1,5 @@
 # ABOUT
-This program is a simple implementation of the producer-consumer problem using a buffer table in C. A more thorough description of how it works is given in the file titled "[Description.md](https://github.com/clickyquack/os-assignment/blob/main/Description.md)".
+This program is a simple implementation of the producer-consumer problem using a buffer table in C. A more thorough description of how it works is given in the file titled "[Description.md](/Description.md)".
 
 # HOW TO RUN
 In a terminal in a Linux or Unix environment with gcc installed, the program can be run by running:
@@ -36,5 +36,6 @@ Consumer: Cleanup done
 ```
 
 # Example screenshots
-Terminal output when ran with default parameters: 
+Terminal output when ran with default parameters:
+
 ![default](/screenshots/default.png)
