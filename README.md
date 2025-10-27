@@ -8,7 +8,7 @@ In a terminal in a Linux or Unix environment with gcc installed, the program can
 ```
 ./run_demo.sh
 ```
-in a directory containing all of the program files. Alternatively, it can be run by manually running each of its commands in sequence. Those being:
+in a directory containing the [run_demo.sh](run_demo.sh) shell file and all of the program files, those being [producer.c](producer.c) and [consumer.c](consumer.c). Alternatively, the program can be run by manually running each of the shell file's commands in sequence. Those being:
 ```
 gcc producer.c -pthread -lrt -o producer
 gcc consumer.c -pthread -lrt -o consumer
