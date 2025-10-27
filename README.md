@@ -40,15 +40,15 @@ Terminal output when ran with default parameters:
 
 ![Default](/screenshots/default.png)
 
-Terminal output when ran with DELAY = 0:
+Terminal output when ran with DELAY = 0 and otherwise default parameters:
 
 ![No delay](/screenshots/nodelay.png)
 
-Terminal output when ran with INFINITE_LOOP = 1:
+Terminal output when ran with INFINITE_LOOP = 1 and otherwise default parameters:
 
 ![Infinite loop](/screenshots/infiniteloop.png)
 
-Terminal output when program compiled and ran manually:
+Terminal output when program compiled and ran manually with default parameters:
 
 ![Manual run](/screenshots/manual.png)
 
